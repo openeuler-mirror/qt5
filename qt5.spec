@@ -1,6 +1,6 @@
 Name:          qt5
 Version:       5.11.1
-Release:       5
+Release:       6
 Summary:       Qt5 meta package
 License:       GPLv3
 URL:           https://getfedora.org/
@@ -25,13 +25,13 @@ and user interfaces for desktop, embedded, and mobile platforms.
 %package      devel
 Summary:      Qt5 meta devel package
 Requires:     qt5-rpm-macros qt5-qttools-static qt5-qtdeclarative-static qt5-qtbase-static
-Requires:     qt5-designer qt5-qdoc qt5-qhelpgenerator qt5-linguist qt5-qt3d-devel qt5-qtbase-devel
-Requires:     qt5-qtconnectivity-devel qt5-qtdeclarative-devel qt5-qtenginio-devel qt5-qtlocation-devel
+Requires:     qt5-designer qt5-qdoc qt5-qhelpgenerator qt5-linguist qt5-qtbase-devel
+Requires:     qt5-qtconnectivity-devel qt5-qtdeclarative-devel qt5-qtlocation-devel
 Requires:     qt5-qtmultimedia-devel qt5-qtscript-devel qt5-qtsensors-devel qt5-qtserialport-devel
 Requires:     qt5-qtsvg-devel qt5-qttools-devel qt5-qtwayland-devel qt5-qtwebchannel-devel
-#Requires: qt5-qtwebengine-devel
-Requires:     qt5-qtwebkit-devel qt5-qtwebsockets-devel qt5-qtx11extras-devel qt5-qtxmlpatterns-devel
-
+#Requires:    qt5-qtwebengine-devel
+Requires:     qt5-qtwebsockets-devel qt5-qtx11extras-devel qt5-qtxmlpatterns-devel
+#Requires:    qt5-qtwebkit-devel qt5-qtenginio-devel qt5-qt3d-devel
 %description  devel
 Development files for %{name}
 
@@ -93,5 +93,11 @@ echo "- Qt5 devel meta package" > %{buildroot}%{_docdir}/qt5-devel/README
 
 
 %changelog
+* Fri Nov 15 2019 openEuler Buildteam <buildteam@openeuler.org> - 5.11.1-6
+- Type:bugfix
+- Id:NA
+- SUG:NA
+- DESC:Delete the dependency include qt5-qt3d qt5-qtenginio-devel qt5-qtwebkit-devel
+
 * Mon Sep 16 2019 openEuler Buildteam <buildteam@openeuler.org> - 5.11.1-5
 - Package init
