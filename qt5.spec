@@ -1,6 +1,6 @@
 Name:          qt5
 Version:       5.11.1
-Release:       6
+Release:       7
 Summary:       Qt5 meta package
 License:       GPLv3
 URL:           https://getfedora.org/
@@ -14,9 +14,7 @@ Requires:      qt5-qtbase-postgresql qt5-qtconnectivity qt5-qtdeclarative qt5-qt
 Requires:      qt5-qtgraphicaleffects qt5-qtimageformats qt5-qtlocation qt5-qtmultimedia
 Requires:      qt5-qtquickcontrols qt5-qtquickcontrols2 qt5-qtscript qt5-qtsensors
 Requires:      qt5-qtserialport qt5-qtsvg qt5-qttools qt5-qtwayland qt5-qtwebchannel
-Requires:      qt5-qtwebkit qt5-qtwebsockets qt5-qtx11extras qt5-qtxmlpatterns
-#need to make qt5 arch'd and deps conditional (on arch)
-#qt5-qtwebengine
+Requires:      qt5-qtwebsockets qt5-qtx11extras qt5-qtxmlpatterns
 
 %description
 Qt is a full development framework with tools designed to streamline the creation of applications
@@ -91,8 +89,10 @@ echo "- Qt5 devel meta package" > %{buildroot}%{_docdir}/qt5-devel/README
 %defattr(-,root,root)
 %{_rpmconfigdir}/macros.d/macros.qt5-srpm
 
-
 %changelog
+* Sat Mar 14 2020 songnannan <songnannan2@huawei.com> - 5.11.1-7
+- delete the unused requires
+
 * Fri Nov 15 2019 openEuler Buildteam <buildteam@openeuler.org> - 5.11.1-6
 - Type:bugfix
 - Id:NA
