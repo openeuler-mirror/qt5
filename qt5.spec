@@ -1,6 +1,6 @@
 Name:          qt5
-Version:       5.11.1
-Release:       7
+Version:       5.15.0
+Release:       0
 Summary:       Qt5 meta package
 License:       GPLv3
 URL:           https://getfedora.org/
@@ -90,6 +90,9 @@ echo "- Qt5 devel meta package" > %{buildroot}%{_docdir}/qt5-devel/README
 %{_rpmconfigdir}/macros.d/macros.qt5-srpm
 
 %changelog
+* Thu Jun 23 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.15.0-0
+- update package to 5.15.0
+
 * Sat Mar 14 2020 songnannan <songnannan2@huawei.com> - 5.11.1-7
 - delete the unused requires
 
