@@ -1,5 +1,5 @@
 Name:          qt5
-Version:       5.14.2
+Version:       5.15.2
 Release:       1
 Summary:       Qt5 meta package
 License:       GPLv3
@@ -90,6 +90,9 @@ echo "- Qt5 devel meta package" > %{buildroot}%{_docdir}/qt5-devel/README
 %{_rpmconfigdir}/macros.d/macros.qt5-srpm
 
 %changelog
+* Tue Feb 2 2021 jinzhimin <jinzhimin2@huawei.com> - 5.15.2-1
+- update to 5.15.2
+
 * Tues Aug 18 2020 jinzhimin <jinzhimin2@huawei.com> - 5.14.2-1
 - rollback package to 5.14.2
 
