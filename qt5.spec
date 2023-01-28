@@ -93,7 +93,7 @@ echo "- Qt5 devel meta package" > %{buildroot}%{_docdir}/qt5-devel/README
 * Tue Feb 2 2021 jinzhimin <jinzhimin2@huawei.com> - 5.15.2-1
 - update to 5.15.2
 
-* Tues Aug 18 2020 jinzhimin <jinzhimin2@huawei.com> - 5.14.2-1
+* Tue Aug 18 2020 jinzhimin <jinzhimin2@huawei.com> - 5.14.2-1
 - rollback package to 5.14.2
 
 * Thu Jun 23 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.15.0-0
