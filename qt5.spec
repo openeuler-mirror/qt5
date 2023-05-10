@@ -1,6 +1,6 @@
 Name:          qt5
 Version:       5.15.2
-Release:       1
+Release:       2
 Summary:       Qt5 meta package
 License:       GPLv3
 URL:           https://getfedora.org/
@@ -66,6 +66,13 @@ sed -i \
   -e "s|@@QMAKE_QT5_WRAPPER@@|%{_bindir}/qmake-qt5.sh|g" \
   %{buildroot}%{_rpmconfigdir}/macros.d/macros.qt5
 
+%if "%toolchain" == "clang"
+sed -i \
+  -e '/QMAKE_LFLAGS_RELEASE/a \  QMAKE_SPEC="linux-clang" \\\\\\' \
+  -e '/QMAKE_LFLAGS_RELEASE/a \  QMAKE_CXX="clang++" \\\\\\' \
+  %{buildroot}%{_rpmconfigdir}/macros.d/macros.qt5
+%endif
+
 mkdir -p %{buildroot}%{_docdir}/qt5
 mkdir -p %{buildroot}%{_docdir}/qt5-devel
 echo "- Qt5 meta package" > %{buildroot}%{_docdir}/qt5/README
@@ -90,6 +97,9 @@ echo "- Qt5 devel meta package" > %{buildroot}%{_docdir}/qt5-devel/README
 %{_rpmconfigdir}/macros.d/macros.qt5-srpm
 
 %changelog
+* Wed May 10 2023 wangjunqiang <wangjunqiang@iscas.ac.cn> - 5.15.2-2
+- support clang build
+
 * Tue Feb 2 2021 jinzhimin <jinzhimin2@huawei.com> - 5.15.2-1
 - update to 5.15.2
 
